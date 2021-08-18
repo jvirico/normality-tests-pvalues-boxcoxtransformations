@@ -1,0 +1,7 @@
+numpy
+scipy
+pandas
+statsmodels
+matplotlib
+seaborn
+warnings
