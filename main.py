@@ -8,7 +8,7 @@ from matplotlib import style
 import statsmodels.api as sm
 from scipy import stats
 
-#plt.style.use('ggplot')
+plt.style.use('seaborn-darkgrid')
 
 #import warnings
 #warnings.filterwarnings('ignore')
@@ -36,7 +36,7 @@ filtered_data = filtered_data[(filtered_data.age > 15) & filtered_data.male == 1
 data = filtered_data['weight']
 print(data)
 
-### Graphical representation of data
+### Graphical representations of data
 #
 # we fit mean and variance to the data
 mu, sigma = stats.norm.fit(data)
@@ -57,9 +57,29 @@ ax.set_ylabel('Probaility Distribution')
 ax.legend()
 plt.show()
 
+# using a boxplot
+fig, ax = plt.subplots(figsize=(7,4))
+ax.set_title('Weight distribution (men older than 15 years old)')
+ax.boxplot(data)
+plt.show()
+
 ### Using Q-Q plot
 fig, ax = plt.subplots(figsize=(7,4))
 sm.qqplot(data,fit=True,line='q',alpha=0.4,lw=2,ax=ax)
 ax.set_title('Q-Q plot of weights of men older than 15 years old')
 ax.tick_params(labelsize=7)
 plt.show()
+
+## Analytical methods
+# Kurtosis analysis
+print('Kurtosis: %s' % stats.kurtosis(data))
+# Skewness
+print('Skewness: %s' % stats.skew(data))
+
+## Hypothesis Contrast
+# Shapiro-Wilk test
+shapiro_test = stats.shapiro(data)
+print(shapiro_test)
+# D'Agostino's K-squared test
+k2, p_value = stats.normaltest(data)
+print('Statistic = %s, p-value= %s' % (k2,p_value))
