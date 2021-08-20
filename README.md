@@ -1,5 +1,5 @@
 
-# Normality Tests, p-values, and data normalization with Python
+# Normality Tests, p-values, and data normalization
 
 ## Introduction
 In statistical analysis there are usually three ways to explore data for a normality contrast or normality test, where we want to find how close a given distribution is to a normal one.
@@ -75,7 +75,7 @@ The D'Agostino's K-squared test not reject the null hypothesis either, since p-v
 
 For the second experiment, a dataset that does not follow a normal distribution is manually transformed using a set of functions, to later run the Hypothesis Constrast on each transformed data sample to compare the amount of normalization achieved. Finally, Box-Cox power transformed [2] is used for adjusting the data distribution to a normal curve.
 
-**Data source:** [Solar Energy process data.](https://support.minitab.com/en-us/minitab/19/help-and-how-to/quality-and-process-improvement/control-charts/how-to/box-cox-transformation/before-you-start/example/)
+**Data source:** [Solar Energy process data.](https://support.minitab.com/en-us/minitab/19/help-and-how-to/quality-and-process-improvement/control-charts/how-to/box-cox-transformation/before-you-start/example/)  
   
 
 As we can see in Fig. 3, the data does not follow a Normal Distribution, its distribution is highly skewed to the right and both Hypothesis Contrast test present a *p-value* below 0.005, rejecting the null hypothesis.
@@ -110,13 +110,12 @@ Fig. 4. Evaluating normality of transformed data distribution using *y = x^2*.
 Fig. 4. Evaluating normality of transformed data distribution using Box-Cox transformation.  
 
 ## Conclusions
-The fact of not being able to assume normality affects mainly to hypothesis parametrics like *t-test* and *ANOVA*, and also to regression models, e.g. linear regression assumes the residuals are normally distributed with zero-mean [3].
+The fact of not being able to assume normality affects mainly to hypothesis parametrics like *t-test* and *ANOVA*, and also to regression models, e.g. linear regression assumes the residuals are normally distributed with zero-mean [3].  
 
 These and other statistical methods require the data to follow a normal, or near normal, distribution. The presented methods are usefull to discover the normality of a data distribution.
-As we have seen, Box-Cox is a family of transformation that helps to fix the non-linearity of the data, and to fix unequal variances [4].
+As we have seen, Box-Cox is a family of transformation that helps to fix the non-linearity of the data, and to fix unequal variances [4].  
 
-## Dependencies
-Installing dependencies:
+## Dependencies  
 > pip install -r requirements.txt  
 
 
@@ -128,5 +127,5 @@ Installing dependencies:
 ## References
 [1] - [Analysis Normality in Python.](https://www.cienciadedatos.net/documentos/pystats06-analisis-normalidad-python.html)  
 [2] - [Box-Cox Transformation.](https://www.youtube.com/watch?v=pKtkkL7tmmQ)  
-[3] - [Data need to be normally-distributed, and other myths of linear regression.](https://mickteaching.wordpress.com/2016/04/19/data-need-to-be-normally-distributed-and-other-myths-of-linear-regression/)
+[3] - [Data need to be normally-distributed, and other myths of linear regression.](https://mickteaching.wordpress.com/2016/04/19/  data-need-to-be-normally-distributed-and-other-myths-of-linear-regression/)  
 [4] - [Transformación de Box-Cox.](https://es.wikipedia.org/wiki/Transformaci%C3%B3n_Box-Cox)
