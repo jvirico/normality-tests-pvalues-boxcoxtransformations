@@ -72,15 +72,24 @@ The D'Agostino's K-squared test not reject the null hypothesis either, since p-v
 (4.257630726093381, 0.11897815632110796)
 ```
 
-#### Experiment 2  
+### **Experiment 2**: Data Normalization  
 
 For the second experiment, a dataset that does not follow a normal distribution is manually transformed using a set of functions, to later run the Hypothesis Constrast on each transformed data sample to compare the amount of normalization achieved. Finally, Box-Cox power transformed [2] is used for an automatic normalization of the data.
 
 **Data source:** [Solar Energy process data.](https://support.minitab.com/en-us/minitab/19/help-and-how-to/quality-and-process-improvement/control-charts/how-to/box-cox-transformation/before-you-start/example/)
   
 
+As we can see in Fig. 3, the data does not follow a Normal Distribution, its distribution is highly skewed to the right and both Hypothesis Contrast test present a *p-value* below 0.005, rejecting the null hypothesis.
+
 <img src="./img/energy_daw_data.png" alt="drawing" width="800"/>  
-Fig. 2. Normal Q-Q plot for weights data.  
+Fig. 3. Evaluating normality of data distribution.  
+
+### Manual data transformations  
+#### **y = sqrt(x)**  
+
+<img src="./img/energy_daw_data.png" alt="drawing" width="800"/>  
+Fig. 3. Evaluating normality of data distribution.  
+
 
 
 ## Dependencies
