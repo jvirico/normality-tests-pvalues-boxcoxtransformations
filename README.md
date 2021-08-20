@@ -19,7 +19,7 @@ In statistical analysis there are usually three ways to explore data for a norma
 ### **Experiment 1**: Normality Contrast
 The aim is to analyze how different a data is distributed compared to a Normal Distribution.
 
-**Data source:** [Men and women's height and weight recordings](https://raw.githubusercontent.com/JoaquinAmatRodrigo/Estadistica-machine-learning-python/master/data/Howell1.csv)
+**Data source:** [Men and women's height and weight recordings.](https://raw.githubusercontent.com/JoaquinAmatRodrigo/Estadistica-machine-learning-python/master/data/Howell1.csv)
 
 #### **Histogram and Normal curve**  
 
@@ -48,7 +48,9 @@ We consider as null hypothesis the normality of the data, the alternative hypoth
 
 The **p-value** of the hypothesis tests indicates the probability of obtaining a distribution such as the observed if the data comes from a normally distributed data source.  
 
-It is important to consider that the bigger the data sample observed, the more reliable the *p-values* will be. However, the bigger is the data sample, less sensible to tha lack of normality the parametric methods become. For this reason, it is important to consider not only the *p-values*, but also the graphical representations and the size of the data sample.
+It is important to consider that the bigger the data sample observed, the more reliable the *p-values* will be. However, the bigger is the data sample, less sensible to tha lack of normality the parametric methods become. For this reason, it is important to consider not only the *p-values*, but also the graphical representations and the size of the data sample.  
+
+Following two common methods for Hypothesis testing are used to evaluate the data.
 
 ### Shapiro-Wilk Test  
 
@@ -60,16 +62,25 @@ The Shapiro-Wilk test does not reject the null hypothesis since p-value > 0.005.
 (0.9898967146873474, 0.2541850805282593)
 ```
 
-# D'Agostino's K-squared test  
+### D'Agostino's K-squared test  
 
 The D'Agostino's K-squared test not reject the null hypothesis either, since p-value > 0.005.
 
 ```python
-print(stats.normaltest(data)) # returns (test statistic, p-value)
+> from scipy import stats
+> print(stats.normaltest(data)) # returns (test statistic, p-value)
 (4.257630726093381, 0.11897815632110796)
 ```
 
-#### Experiment 2
+#### Experiment 2  
+
+For the second experiment, a dataset that does not follow a normal distribution is manually transformed using a set of functions, to later run the Hypothesis Constrast on each transformed data sample to compare the amount of normalization achieved. Finally, Box-Cox power transformed [2] is used for an automatic normalization of the data.
+
+**Data source:** [Solar Energy process data.](https://support.minitab.com/en-us/minitab/19/help-and-how-to/quality-and-process-improvement/control-charts/how-to/box-cox-transformation/before-you-start/example/)
+  
+
+<img src="./img/energy_daw_data.png" alt="drawing" width="800"/>  
+Fig. 2. Normal Q-Q plot for weights data.  
 
 
 ## Dependencies
