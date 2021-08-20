@@ -13,7 +13,16 @@ plt.style.use('seaborn-darkgrid')
 #import warnings
 #warnings.filterwarnings('ignore')
 
-# Data
+'''
+    Two datasets are explored:
+        Dataset 1 - Men and women's height and weight recordings
+                    Source: https://raw.githubusercontent.com/JoaquinAmatRodrigo/Estadistica-machine-learning-python/master/data/Howell1.csv
+        Dataset 2 - Solar Energy process data
+                    Source: https://support.minitab.com/en-us/minitab/19/help-and-how-to/quality-and-process-improvement/control-charts/how-to/box-cox-transformation/before-you-start/example/
+
+'''
+
+#### Dataset 1
 '''
 url = ('https://raw.githubusercontent.com/JoaquinAmatRodrigo/' +
        'Estadistica-machine-learning-python/master/data/Howell1.csv')
@@ -27,8 +36,9 @@ weight = filtered_data['weight']
 weight.to_csv('./data/filtered_data_weight.csv')
 '''
 
+# Filtering the data
 raw_data = pd.read_csv('./data/raw_data.csv')
-#print(raw_data.head(10))
+print(raw_data.head(10))
 filtered_data = raw_data.copy()
 filtered_data = filtered_data[(filtered_data.age > 15) & filtered_data.male == 1]
 #print(filtered_data.head(5))
@@ -83,5 +93,6 @@ print(shapiro_test)
 # D'Agostino's K-squared test
 k2, p_value = stats.normaltest(data)
 print('Statistic = %s, p-value= %s' % (k2,p_value))
+
 
 

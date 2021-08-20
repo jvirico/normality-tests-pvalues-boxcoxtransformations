@@ -13,11 +13,16 @@ In statistical analysis there are usually three ways to explore data for a norma
   - Shapiro-Wilk test
   - D'Agostino's K-squared test
 
+## Analysis
+#### Experiment 1
+No rechaza la hipotesis nula.
+#### Experiment 2
+
 
 ## Dependencies
 Installing dependencies:
 > pip install -r requirements.txt
 
 ## References
-[1] - abc
-[2] - abc
+[1] - [Analysis Normality in Python](https://www.cienciadedatos.net/documentos/pystats06-analisis-normalidad-python.html)
+[2] - [Box-Cox Transformation](https://www.youtube.com/watch?v=pKtkkL7tmmQ)
