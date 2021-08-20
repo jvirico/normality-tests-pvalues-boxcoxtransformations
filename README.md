@@ -91,29 +91,28 @@ Fig. 4. Evaluating normality of transformed data distribution using *y = sqrt(x)
 ### Manual data transformation  (**y = 1/x**)  
 
 <img src="./img/inv.png" alt="drawing" width="800"/>  
-Fig. 4. Evaluating normality of transformed data distribution using *y = 1/x*.  
+Fig. 5. Evaluating normality of transformed data distribution using *y = 1/x*.  
 
 ### Manual data transformation  (**y = Ln(x)**)  
 
 <img src="./img/inv.png" alt="drawing" width="800"/>  
-Fig. 4. Evaluating normality of transformed data distribution using *y = Ln(x)*.  
+Fig. 6. Evaluating normality of transformed data distribution using *y = Ln(x)*.  
 
 
 ### Manual data transformation  (**y = x^2**)  
 
 <img src="./img/squared.png" alt="drawing" width="800"/>  
-Fig. 4. Evaluating normality of transformed data distribution using *y = x^2*.  
+Fig. 7. Evaluating normality of transformed data distribution using *y = x^2*.  
 
 ### **Box-Cox power Transform**  
 
 <img src="./img/box-cox.png" alt="drawing" width="800"/>  
-Fig. 4. Evaluating normality of transformed data distribution using Box-Cox transformation.  
+Fig. 8. Evaluating normality of transformed data distribution using Box-Cox transformation.  
 
 ## Conclusions
-The fact of not being able to assume normality affects mainly to hypothesis parametrics like *t-test* and *ANOVA*, and also to regression models, e.g. linear regression assumes the residuals are normally distributed with zero-mean [3].  
+The fact of not being able to assume normality affects mainly to hypothesis parametrics like *t-test* and *ANOVA*. Assumptions on normality may also be present in machine learning models, e.g. linear regression assumes the residuals are normally distributed with zero-mean [3].  
 
-These and other statistical methods require the data to follow a normal, or near normal, distribution. The presented methods are usefull to discover the normality of a data distribution.
-As we have seen, Box-Cox is a family of transformation that helps to fix the non-linearity of the data, and to fix unequal variances [4].  
+Since some statistical methods lack robusteness against normality, the presented methods are usefull to discover the normality of a data distribution. Furthemore, as we show in Fig. 8, Box-Cox is a family of transformation that helps to normalize a distribution, to fix the non-linearity of the data, or to fix unequal variances [4].  
 
 ## Dependencies  
 > pip install -r requirements.txt  
