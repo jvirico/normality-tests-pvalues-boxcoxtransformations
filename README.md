@@ -63,7 +63,7 @@ The Shapiro-Wilk test does not reject the null hypothesis since p-value > 0.005.
 
 ### D'Agostino's K-squared test  
 
-The D'Agostino's K-squared test not reject the null hypothesis either, since p-value > 0.005.
+The D'Agostino's K-squared test does not reject the null hypothesis either, since p-value > 0.005.
 
 ```python
 > from scipy import stats
