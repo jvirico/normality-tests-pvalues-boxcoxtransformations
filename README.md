@@ -74,28 +74,55 @@ The D'Agostino's K-squared test not reject the null hypothesis either, since p-v
 
 ### **Experiment 2**: Data Normalization  
 
-For the second experiment, a dataset that does not follow a normal distribution is manually transformed using a set of functions, to later run the Hypothesis Constrast on each transformed data sample to compare the amount of normalization achieved. Finally, Box-Cox power transformed [2] is used for an automatic normalization of the data.
+For the second experiment, a dataset that does not follow a normal distribution is manually transformed using a set of functions, to later run the Hypothesis Constrast on each transformed data sample to compare the amount of normalization achieved. Finally, Box-Cox power transformed [2] is used for adjusting the data distribution to a normal curve.
 
 **Data source:** [Solar Energy process data.](https://support.minitab.com/en-us/minitab/19/help-and-how-to/quality-and-process-improvement/control-charts/how-to/box-cox-transformation/before-you-start/example/)
   
 
 As we can see in Fig. 3, the data does not follow a Normal Distribution, its distribution is highly skewed to the right and both Hypothesis Contrast test present a *p-value* below 0.005, rejecting the null hypothesis.
 
-<img src="./img/energy_daw_data.png" alt="drawing" width="800"/>  
+<img src="./img/energy_raw_analysis.png" alt="drawing" width="800"/>  
 Fig. 3. Evaluating normality of data distribution.  
 
 ### Manual data transformations  
 #### **y = sqrt(x)**  
 
-<img src="./img/energy_daw_data.png" alt="drawing" width="800"/>  
-Fig. 3. Evaluating normality of data distribution.  
+<img src="./img/sqrt.png" alt="drawing" width="800"/>  
+Fig. 4. Evaluating normality of transformed data distribution using *y = sqrt(x)*.  
+
+#### **y = 1/x**  
+
+<img src="./img/inv.png" alt="drawing" width="800"/>  
+Fig. 4. Evaluating normality of transformed data distribution using *y = 1/x*.  
+
+#### **y = Ln(x)**  
+
+<img src="./img/inv.png" alt="drawing" width="800"/>  
+Fig. 4. Evaluating normality of transformed data distribution using *y = Ln(x)*.  
 
 
+#### **y = x^2**  
+
+<img src="./img/squared.png" alt="drawing" width="800"/>  
+Fig. 4. Evaluating normality of transformed data distribution using *y = x^2*.  
+
+#### **Box-Cox power Transform**  
+
+<img src="./img/box-cox.png" alt="drawing" width="800"/>  
+Fig. 4. Evaluating normality of transformed data distribution using Box-Cox transformation.  
+
+## Conclusions
+The fact of not being able to assume normality affects mainly to hypothesis parametrics like *t-test* and *ANOVA*, and also to regression models, e.g. linear regression assumes the residuals are normally distributed with zero-mean [3].
+
+These and other statistical methods require the data to follow a normal, or near normal, distribution. The presented methods are usefull to discover the normality of a data distribution.
+Box-Cox is a family of transformation that helps to fix the non-linearity of the data, or to fix unequal variances [4].
 
 ## Dependencies
 Installing dependencies:
 > pip install -r requirements.txt
 
 ## References
-[1] - [Analysis Normality in Python](https://www.cienciadedatos.net/documentos/pystats06-analisis-normalidad-python.html)
-[2] - [Box-Cox Transformation](https://www.youtube.com/watch?v=pKtkkL7tmmQ)
+[1] - [Analysis Normality in Python.](https://www.cienciadedatos.net/documentos/pystats06-analisis-normalidad-python.html)  
+[2] - [Box-Cox Transformation.](https://www.youtube.com/watch?v=pKtkkL7tmmQ)  
+[3] - [Data need to be normally-distributed, and other myths of linear regression.](https://mickteaching.wordpress.com/2016/04/19/data-need-to-be-normally-distributed-and-other-myths-of-linear-regression/)
+[4] - [Transformación de Box-Cox.](https://es.wikipedia.org/wiki/Transformaci%C3%B3n_Box-Cox)
