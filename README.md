@@ -14,7 +14,14 @@ In statistical analysis there are usually three ways to explore data for a norma
   - D'Agostino's K-squared test
 
 ## Analysis
-#### Experiment 1
+#### Experiment 1: Normality Contrast
+The aim is to analyze how different a data distribution is from a Normal Distribution.
+
+**Data:** [Men and women's height and weight recordings](https://raw.githubusercontent.com/JoaquinAmatRodrigo/Estadistica-machine-learning-python/master/data/Howell1.csv)
+
+**Histogram and Normal curve**
+<img src="./img/histogram.png" alt="drawing" width="400"/>
+
 No rechaza la hipotesis nula.
 #### Experiment 2
 
