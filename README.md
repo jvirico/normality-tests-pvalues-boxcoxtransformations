@@ -127,5 +127,5 @@ As we have seen, Box-Cox is a family of transformation that helps to fix the non
 ## References
 [1] - [Analysis Normality in Python.](https://www.cienciadedatos.net/documentos/pystats06-analisis-normalidad-python.html)  
 [2] - [Box-Cox Transformation.](https://www.youtube.com/watch?v=pKtkkL7tmmQ)  
-[3] - [Data need to be normally-distributed, and other myths of linear regression.](https://mickteaching.wordpress.com/2016/04/19/  data-need-to-be-normally-distributed-and-other-myths-of-linear-regression/)  
+[3] - [Data need to be normally-distributed, and other myths of linear regression.](https://mickteaching.wordpress.com/2016/04/19/data-need-to-be-normally-distributed-and-other-myths-of-linear-regression/)  
 [4] - [Transformación de Box-Cox.](https://es.wikipedia.org/wiki/Transformaci%C3%B3n_Box-Cox)
