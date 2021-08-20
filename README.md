@@ -1,5 +1,5 @@
 
-# Normality Tests, p-values, and transforming data distributions to a near Gaussian shape with Python
+# Normality Tests, p-values, and data normalization with Python
 
 ## Introduction
 In statistical analysis there are usually three ways to explore data for a normality contrast or normality test, where we want to find how close a given distribution is to a normal one.
@@ -15,27 +15,26 @@ In statistical analysis there are usually three ways to explore data for a norma
 - Normalization
   - Box-Cox power transformation.
 
-## Analysis
-### **Experiment 1**: Normality Contrast
+## **Experiment 1**: Normality Contrast
 The aim is to analyze how different a data is distributed compared to a Normal Distribution.
 
 **Data source:** [Men and women's height and weight recordings.](https://raw.githubusercontent.com/JoaquinAmatRodrigo/Estadistica-machine-learning-python/master/data/Howell1.csv)
 
-#### **Histogram and Normal curve**  
+### **Histogram and Normal curve**  
 
 The data is represented via a histogram, together with a normal distribution that follows mean and standard deviation of the data.  
 
 <img src="./img/histogram.png" alt="drawing" width="400"/>  
 Fig. 1. Our data already follows closely a normal distribution.  
 
-#### **Quantile plot (Q-Q plot)**  
+### **Quantile plot (Q-Q plot)**  
 
 A quantile-quantile plot is a probability plot, whish is as a graphical method for comparing two probability distributions by comparing their quantiles against each other.  
 
 <img src="./img/qq_plot.png" alt="drawing" width="400"/>  
 Fig. 2. Normal Q-Q plot for weights data.  
 
-#### **Asymmetry and Kurtosis**  
+### **Asymmetry and Kurtosis**  
 
 The normality of a distribution can be assesed looking at the skewness of the data distribution and kurtosis.  
 
@@ -43,7 +42,7 @@ The normality of a distribution can be assesed looking at the skewness of the da
 
 In the present data, we observe a kurtosis of *0.293* and a skewness of *-0.330*, while the normal distribution following the data mean and std shows a kurtosis of *-1.38* and skewness of *0.35*.
 
-#### **Hypothesis Contrast**  
+### **Hypothesis Contrast**  
 We consider as null hypothesis the normality of the data, the alternative hypothesis is that the data does not follow a normal distribution.  
 
 The **p-value** of the hypothesis tests indicates the probability of obtaining a distribution such as the observed if the data comes from a normally distributed data source.  
@@ -72,7 +71,7 @@ The D'Agostino's K-squared test not reject the null hypothesis either, since p-v
 (4.257630726093381, 0.11897815632110796)
 ```
 
-### **Experiment 2**: Data Normalization  
+## **Experiment 2**: Data Normalization  
 
 For the second experiment, a dataset that does not follow a normal distribution is manually transformed using a set of functions, to later run the Hypothesis Constrast on each transformed data sample to compare the amount of normalization achieved. Finally, Box-Cox power transformed [2] is used for adjusting the data distribution to a normal curve.
 
@@ -84,29 +83,28 @@ As we can see in Fig. 3, the data does not follow a Normal Distribution, its dis
 <img src="./img/energy_raw_analysis.png" alt="drawing" width="800"/>  
 Fig. 3. Evaluating normality of data distribution.  
 
-### Manual data transformations  
-#### **y = sqrt(x)**  
+### Manual data transformation  (**y = sqrt(x)**)  
 
 <img src="./img/sqrt.png" alt="drawing" width="800"/>  
 Fig. 4. Evaluating normality of transformed data distribution using *y = sqrt(x)*.  
 
-#### **y = 1/x**  
+### Manual data transformation  (**y = 1/x**)  
 
 <img src="./img/inv.png" alt="drawing" width="800"/>  
 Fig. 4. Evaluating normality of transformed data distribution using *y = 1/x*.  
 
-#### **y = Ln(x)**  
+### Manual data transformation  (**y = Ln(x)**)  
 
 <img src="./img/inv.png" alt="drawing" width="800"/>  
 Fig. 4. Evaluating normality of transformed data distribution using *y = Ln(x)*.  
 
 
-#### **y = x^2**  
+### Manual data transformation  (**y = x^2**)  
 
 <img src="./img/squared.png" alt="drawing" width="800"/>  
 Fig. 4. Evaluating normality of transformed data distribution using *y = x^2*.  
 
-#### **Box-Cox power Transform**  
+### **Box-Cox power Transform**  
 
 <img src="./img/box-cox.png" alt="drawing" width="800"/>  
 Fig. 4. Evaluating normality of transformed data distribution using Box-Cox transformation.  
@@ -115,11 +113,17 @@ Fig. 4. Evaluating normality of transformed data distribution using Box-Cox tran
 The fact of not being able to assume normality affects mainly to hypothesis parametrics like *t-test* and *ANOVA*, and also to regression models, e.g. linear regression assumes the residuals are normally distributed with zero-mean [3].
 
 These and other statistical methods require the data to follow a normal, or near normal, distribution. The presented methods are usefull to discover the normality of a data distribution.
-Box-Cox is a family of transformation that helps to fix the non-linearity of the data, or to fix unequal variances [4].
+As we have seen, Box-Cox is a family of transformation that helps to fix the non-linearity of the data, and to fix unequal variances [4].
 
 ## Dependencies
 Installing dependencies:
-> pip install -r requirements.txt
+> pip install -r requirements.txt  
+
+
+## Cite this work
+    J. Rico (2021) Normality Tests, p-values, and data normalization with Python.
+    [Source code](https://github.com/jvirico/normality-tests-pvalues-boxcoxtransformations)
+
 
 ## References
 [1] - [Analysis Normality in Python.](https://www.cienciadedatos.net/documentos/pystats06-analisis-normalidad-python.html)  
