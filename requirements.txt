@@ -3,5 +3,6 @@ scipy
 pandas
 statsmodels
 matplotlib
-seaborn
-warnings
+#seaborn
+#warnings
+

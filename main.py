@@ -83,3 +83,5 @@ print(shapiro_test)
 # D'Agostino's K-squared test
 k2, p_value = stats.normaltest(data)
 print('Statistic = %s, p-value= %s' % (k2,p_value))
+
+
