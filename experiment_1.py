@@ -86,6 +86,9 @@ print('Kurtosis: %s' % stats.kurtosis(data))
 # Skewness
 print('Skewness: %s' % stats.skew(data))
 
+print('Normal Kurtosis: %s' % stats.kurtosis(y_hat))
+print('Normal Skewness: %s' % stats.skew(y_hat))
+
 ## Hypothesis Contrast
 # Shapiro-Wilk test
 shapiro_test = stats.shapiro(data)
